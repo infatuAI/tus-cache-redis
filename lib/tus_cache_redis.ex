@@ -36,9 +36,9 @@ defmodule Tus.Cache.Redis do
     Redix.start_link(
       [
         host: Map.get(config, :redis_host, "localhost"),
-        port: Map.get(config, :redis_port, 6379)
-      ],
-      name: cache_name
+        port: Map.get(config, :redis_port, 6379),
+        name: cache_name
+      ]
     )
   end
 
